@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export interface Field {
   name: string;
@@ -32,9 +33,10 @@ export function useSchemaData() {
   const [data, setData] = useState<SchemaData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const schemaUrl = useBaseUrl('/data/schema.json');
 
   useEffect(() => {
-    fetch('/data/schema.json')
+    fetch(schemaUrl)
       .then(res => {
         if (!res.ok) {
           throw new Error(`Failed to load schema: ${res.statusText}`);
@@ -49,7 +51,7 @@ export function useSchemaData() {
         setError(err);
         setLoading(false);
       });
-  }, []);
+  }, [schemaUrl]);
 
   return { data, loading, error };
 }
