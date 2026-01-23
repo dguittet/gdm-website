@@ -1,0 +1,4901 @@
+{
+  "datasets": [
+    {
+      "id": "bare_conductor_equipment",
+      "name": "Bare Conductor Equipment",
+      "table": "bare_conductor_equipment",
+      "class": "BareConductorEquipment",
+      "description": "Data model for conductor catalaog.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "ac_resistance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ac_resistance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "dc_resistance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "dc_resistance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "conductor_diameter_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "conductor_diameter_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "conductor_gmr_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "conductor_gmr_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "emergency_ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "emergency_ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 13
+    },
+    {
+      "id": "battery_equipment",
+      "name": "Battery Equipment",
+      "table": "battery_equipment",
+      "class": "BatteryEquipment",
+      "description": "Data model for Solar Model.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "rated_capacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_capacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_energy_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_energy_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "initial_energy_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "initial_energy_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "charge_efficiency",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "discharge_efficiency",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 9
+    },
+    {
+      "id": "bus_voltagelimits",
+      "name": "Bus Voltagelimits",
+      "table": "bus_voltagelimits",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "limitset_uuid",
+          "sql_type": "UUID,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 2
+    },
+    {
+      "id": "capacitor_equipment",
+      "name": "Capacitor Equipment",
+      "table": "capacitor_equipment",
+      "class": "CapacitorEquipment",
+      "description": "Data model for capacitor model.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "connection_type",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[ConnectionType, Field(ConnectionType.STAR, description='Connection type for this capacitor.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_voltage_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_voltage_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "voltage_type",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[VoltageTypes, Field(..., description='Rated voltage is line to line or line to neutral.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 5
+    },
+    {
+      "id": "capacitor_phase_capacitors",
+      "name": "Capacitor Phase Capacitors",
+      "table": "capacitor_phase_capacitors",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "capacitor_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_capacitor_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "position",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "component_base",
+      "name": "Component Base",
+      "table": "component_base",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "component_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "system_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ext",
+          "sql_type": "JSONB,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "created_at",
+          "sql_type": "TIMESTAMP",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "CURRENT_TIMESTAMP",
+          "is_primary_key": false
+        },
+        {
+          "name": "updated_at",
+          "sql_type": "TIMESTAMP",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "CURRENT_TIMESTAMP",
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "component_buses",
+      "name": "Component Buses",
+      "table": "component_buses",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "component_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "position",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "component_phases",
+      "name": "Component Phases",
+      "table": "component_phases",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "component_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_enum",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "position",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "concentric_cable_equipment",
+      "name": "Concentric Cable Equipment",
+      "table": "concentric_cable_equipment",
+      "class": "ConcentricCableEquipment",
+      "description": "Data model for cable catalog.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "conductor_gmr_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "conductor_gmr_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_ac_resistance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_ac_resistance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_dc_resistance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_dc_resistance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "conductor_diameter_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "conductor_diameter_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_gmr_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_gmr_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_ac_resistance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_ac_resistance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_dc_resistance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_dc_resistance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_count",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_diameter_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "strand_diameter_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "diameter_over_insulation_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "diameter_over_insulation_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "emergency_ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "emergency_ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 24
+    },
+    {
+      "id": "distribution_battery",
+      "name": "Distribution Battery",
+      "table": "distribution_battery",
+      "class": "DistributionBattery",
+      "description": "Data model for battery system in distribution system models.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "state",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "active_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "active_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactive_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactive_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "energy_capacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "energy_capacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "battery_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "inverter_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "inverter_controller_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 12
+    },
+    {
+      "id": "distribution_bus",
+      "name": "Distribution Bus",
+      "table": "distribution_bus",
+      "class": "DistributionBus",
+      "description": "Data model for distribution bus.\n\nExamples:\n    >>> from gdm import DistributionBus\n    >>> DistributionBus.example()",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "coordinate_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "voltage_type",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[VoltageTypes, Field(..., description='Voltage types for buses.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_voltage_value_original",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_voltage_units_original",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_voltage_value_si",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "nominal_voltage_kv",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_cached",
+          "sql_type": "FLOAT,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "y_cached",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "crs_cached",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 10
+    },
+    {
+      "id": "distribution_capacitor",
+      "name": "Distribution Capacitor",
+      "table": "distribution_capacitor",
+      "class": "DistributionCapacitor",
+      "description": "Data model for capacitor present in distribution system models.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "controller_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "is_open",
+          "sql_type": "BOOLEAN",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "FALSE",
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 5
+    },
+    {
+      "id": "distribution_component_base",
+      "name": "Distribution Component Base",
+      "table": "distribution_component_base",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "substation_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "feeder_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "in_service",
+          "sql_type": "BOOLEAN",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "TRUE",
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_code",
+          "sql_type": "VARCHAR,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "external_id",
+          "sql_type": "VARCHAR,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "source_system",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "distribution_feeder",
+      "name": "Distribution Feeder",
+      "table": "distribution_feeder",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "substation_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 2
+    },
+    {
+      "id": "distribution_load",
+      "name": "Distribution Load",
+      "table": "distribution_load",
+      "class": "DistributionLoad",
+      "description": "Data model for distribution load.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "distribution_regulator",
+      "name": "Distribution Regulator",
+      "table": "distribution_regulator",
+      "class": "DistributionRegulator",
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "controller_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "secondary_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 4
+    },
+    {
+      "id": "distribution_solar",
+      "name": "Distribution Solar",
+      "table": "distribution_solar",
+      "class": "DistributionSolar",
+      "description": "Data model for Solar PV system in distribution system models.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "active_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "active_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactive_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactive_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "irradiance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "irradiance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "inverter_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "solar_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "inverter_controller_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 11
+    },
+    {
+      "id": "distribution_substation",
+      "name": "Distribution Substation",
+      "table": "distribution_substation",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        }
+      ],
+      "field_count": 1
+    },
+    {
+      "id": "distribution_system",
+      "name": "Distribution System",
+      "table": "distribution_system",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "name",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "description",
+          "sql_type": "TEXT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "data_format_version",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "time_series_directory",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "time_series_storage_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "created_at",
+          "sql_type": "TIMESTAMP",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "CURRENT_TIMESTAMP",
+          "is_primary_key": false
+        },
+        {
+          "name": "updated_at",
+          "sql_type": "TIMESTAMP",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "CURRENT_TIMESTAMP",
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 8
+    },
+    {
+      "id": "distribution_transformer",
+      "name": "Distribution Transformer",
+      "table": "distribution_transformer",
+      "class": "DistributionTransformer",
+      "description": "Data model for defining distribution transformer.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "secondary_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tertiary_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 4
+    },
+    {
+      "id": "distribution_transformer_equipment",
+      "name": "Distribution Transformer Equipment",
+      "table": "distribution_transformer_equipment",
+      "class": "DistributionTransformerEquipment",
+      "description": "Data model for distribution transformer info.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "pct_no_load_loss",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(..., strict=True, ge=0, le=100, description='Percentage no load losses for this transformer.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "pct_full_load_loss",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(..., strict=True, ge=0, le=100, description='Percentage no load losses for this transformer.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "is_center_tapped",
+          "sql_type": "BOOLEAN",
+          "python_type": "Annotated[bool, Field(..., description='Is this transformer center tapped.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "FALSE",
+          "is_primary_key": false
+        },
+        {
+          "name": "mounting",
+          "sql_type": "VARCHAR,",
+          "python_type": "Annotated[TransformerMounting, Field(TransformerMounting.POLE_MOUNT, description='Transformer mounting type.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "coupling_sequences_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "winding_reactances_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "distribution_voltage_source",
+      "name": "Distribution Voltage Source",
+      "table": "distribution_voltage_source",
+      "class": "DistributionVoltageSource",
+      "description": "Data model for distribution substation.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "positive_sequence_voltage_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "positive_sequence_voltage_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "positive_sequence_angle_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "positive_sequence_angle_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "equipment_component_base",
+      "name": "Equipment Component Base",
+      "table": "equipment_component_base",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "catalog_name",
+          "sql_type": "VARCHAR,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "equipment_class",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "geometry_branch",
+      "name": "Geometry Branch",
+      "table": "geometry_branch",
+      "class": "GeometryBranch",
+      "description": "Data model for distribution branches based on line geometry.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_value_original",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_units_original",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_value_si",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "from_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "to_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "geometry_branch_equipment",
+      "name": "Geometry Branch Equipment",
+      "table": "geometry_branch_equipment",
+      "class": "GeometryBranchEquipment",
+      "description": "Data model for geometry branch info.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "horizontal_positions_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "vertical_positions_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "positions_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "neutral_insulated",
+          "sql_type": "BOOLEAN",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "insulation_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 6
+    },
+    {
+      "id": "geometry_conductors",
+      "name": "Geometry Conductors",
+      "table": "geometry_conductors",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "geometry_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "conductor_equipment_uuid",
+          "sql_type": "UUID,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "position",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "inverter_controller",
+      "name": "Inverter Controller",
+      "table": "inverter_controller",
+      "class": "InverterController",
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "controller_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "settings_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "inverter_equipment",
+      "name": "Inverter Equipment",
+      "table": "inverter_equipment",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "rated_apparent_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_apparent_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "active_power_limit_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "active_power_limit_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactive_power_limit_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactive_power_limit_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "efficiency",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 8
+    },
+    {
+      "id": "load_equipment",
+      "name": "Load Equipment",
+      "table": "load_equipment",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "connection_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 2
+    },
+    {
+      "id": "load_equipment_phase_loads",
+      "name": "Load Equipment Phase Loads",
+      "table": "load_equipment_phase_loads",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "load_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_load_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "position",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "locations",
+      "name": "Locations",
+      "table": "locations",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "x",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "y",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "crs",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 4
+    },
+    {
+      "id": "matrix_impedance_branch",
+      "name": "Matrix Impedance Branch",
+      "table": "matrix_impedance_branch",
+      "class": "MatrixImpedanceBranch",
+      "description": "Data model for matrix impedance branch.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_value_original",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_units_original",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_value_si",
+          "sql_type": "NUMERIC,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "from_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "to_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "matrix_impedance_branch_equipment",
+      "name": "Matrix Impedance Branch Equipment",
+      "table": "matrix_impedance_branch_equipment",
+      "class": "MatrixImpedanceBranchEquipment",
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "r_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r11",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r22",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r33",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x11",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x22",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x33",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "construction",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 16
+    },
+    {
+      "id": "matrix_impedance_fuse",
+      "name": "Matrix Impedance Fuse",
+      "table": "matrix_impedance_fuse",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "from_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "to_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 4
+    },
+    {
+      "id": "matrix_impedance_fuse_equipment",
+      "name": "Matrix Impedance Fuse Equipment",
+      "table": "matrix_impedance_fuse_equipment",
+      "class": "MatrixImpedanceFuseEquipment",
+      "description": "Data model for impedance based fuse equipment.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "r_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r11",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r22",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r33",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x11",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x22",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x33",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "construction",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "delay_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "delay_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tcc_curve_name",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tcc_curve_x_json",
+          "sql_type": "JSONB,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tcc_curve_x_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tcc_curve_y_json",
+          "sql_type": "JSONB,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tcc_curve_y_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 23
+    },
+    {
+      "id": "matrix_impedance_recloser",
+      "name": "Matrix Impedance Recloser",
+      "table": "matrix_impedance_recloser",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "controller_uuid",
+          "sql_type": "UUID,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "from_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "to_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 5
+    },
+    {
+      "id": "matrix_impedance_recloser_equipment",
+      "name": "Matrix Impedance Recloser Equipment",
+      "table": "matrix_impedance_recloser_equipment",
+      "class": "MatrixImpedanceRecloserEquipment",
+      "description": "Data model for matrix impedance based recloser equipment.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "r_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r11",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r22",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r33",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x11",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x22",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x33",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "construction",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 16
+    },
+    {
+      "id": "matrix_impedance_switch",
+      "name": "Matrix Impedance Switch",
+      "table": "matrix_impedance_switch",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "is_open",
+          "sql_type": "BOOLEAN",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "FALSE",
+          "is_primary_key": false
+        },
+        {
+          "name": "from_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "to_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 5
+    },
+    {
+      "id": "matrix_impedance_switch_equipment",
+      "name": "Matrix Impedance Switch Equipment",
+      "table": "matrix_impedance_switch_equipment",
+      "class": "MatrixImpedanceSwitchEquipment",
+      "description": "Data model for matrix impedance based recloser equipment.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "r_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c_matrix_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c_matrix_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r11",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r22",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r33",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x11",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x22",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x33",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "construction",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "controller_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 17
+    },
+    {
+      "id": "phase_capacitor_equipment",
+      "name": "Phase Capacitor Equipment",
+      "table": "phase_capacitor_equipment",
+      "class": "PhaseCapacitorEquipment",
+      "description": "Data model for phase capacitor.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "rated_reactive_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_reactive_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "resistance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "resistance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactance_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactance_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "num_banks",
+          "sql_type": "INTEGER",
+          "python_type": "Annotated[PositiveInt, Field(1, description='Number of banks in the capacitor.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "num_banks_on",
+          "sql_type": "INTEGER",
+          "python_type": "Annotated[NonNegativeInt, Field(..., description='Number of banks currently on.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 9
+    },
+    {
+      "id": "phase_load_equipment",
+      "name": "Phase Load Equipment",
+      "table": "phase_load_equipment",
+      "class": "PhaseLoadEquipment",
+      "description": "Data model for single phase load equipment.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "real_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "real_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactive_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactive_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "z_real",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(description='Constant impedance zip load real component. (a_p)')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "z_imag",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(description='Constant impedance zip load imaginary component. (a_q)')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "i_real",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(description='Constant current zip load real component. (b_p)')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "i_imag",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(description='Constant current zip load imaginary component. (b_q)')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "p_real",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(description='Constant power zip load real component. (c_p)')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "p_imag",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(description='Constant power zip load imaginary component. (c_q)')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "num_customers",
+          "sql_type": "INTEGER",
+          "python_type": "Annotated[Optional[PositiveInt], Field(None, description='Number of customers for this load')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 12
+    },
+    {
+      "id": "phase_voltage_source_equipment",
+      "name": "Phase Voltage Source Equipment",
+      "table": "phase_voltage_source_equipment",
+      "class": "PhaseVoltageSourceEquipment",
+      "description": "Data model for phase voltage source.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "voltage_magnitude_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "voltage_magnitude_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "voltage_angle_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "voltage_angle_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "source_impedance_real",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "source_impedance_imag",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "regulator_controller",
+      "name": "Regulator Controller",
+      "table": "regulator_controller",
+      "class": "RegulatorController",
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "control_mode",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "bandwidth_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "bandwidth_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "settings_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 5
+    },
+    {
+      "id": "sequence_impedance_branch",
+      "name": "Sequence Impedance Branch",
+      "table": "sequence_impedance_branch",
+      "class": "SequenceImpedanceBranch",
+      "description": "Data model for sequence impedance branch.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "equipment_uuid",
+          "sql_type": "UUID,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_value_original",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_units_original",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length_value_si",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "from_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "to_bus_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "sequence_impedance_branch_equipment",
+      "name": "Sequence Impedance Branch Equipment",
+      "table": "sequence_impedance_branch_equipment",
+      "class": "SequenceImpedanceBranchEquipment",
+      "description": "Data model for sequence impedance branch.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "r0_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r0_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x0_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x0_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r1_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "r1_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x1_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "x1_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c0_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c0_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c1_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "c1_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "construction",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 16
+    },
+    {
+      "id": "solar_equipment",
+      "name": "Solar Equipment",
+      "table": "solar_equipment",
+      "class": "SolarEquipment",
+      "description": "Data model for Solar Model.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "rated_capacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_capacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "array_tilt_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "array_tilt_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "array_azimuth_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "array_azimuth_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 7
+    },
+    {
+      "id": "thermal_limitset",
+      "name": "Thermal Limitset",
+      "table": "thermal_limitset",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "limit_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "value_amps",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "duration_seconds",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 4
+    },
+    {
+      "id": "time_series_metadata",
+      "name": "Time Series Metadata",
+      "table": "time_series_metadata",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "component_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "variable_name",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": false,
+          "required": true,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "series_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "initial_time",
+          "sql_type": "TIMESTAMP",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "resolution_seconds",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "length",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "normalization_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "normalization_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "features_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "storage_path",
+          "sql_type": "VARCHAR,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "created_at",
+          "sql_type": "TIMESTAMP",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": "CURRENT_TIMESTAMP",
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 12
+    },
+    {
+      "id": "transformer_phases",
+      "name": "Transformer Phases",
+      "table": "transformer_phases",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "transformer_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "winding_position",
+          "sql_type": "INTEGER,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_list",
+          "sql_type": "TEXT,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "transformer_windings",
+      "name": "Transformer Windings",
+      "table": "transformer_windings",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "transformer_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "winding_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "winding_number",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "voltage_capacitor_controller",
+      "name": "Voltage Capacitor Controller",
+      "table": "voltage_capacitor_controller",
+      "class": "VoltageCapacitorController",
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "control_mode",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "settings_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "voltage_limitset",
+      "name": "Voltage Limitset",
+      "table": "voltage_limitset",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "limit_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "value_volts",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "voltage_source_equipment",
+      "name": "Voltage Source Equipment",
+      "table": "voltage_source_equipment",
+      "class": "VoltageSourceEquipment",
+      "description": "Data model for voltage source model.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "connection_type",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_voltage_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_voltage_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 4
+    },
+    {
+      "id": "voltage_source_phase_sources",
+      "name": "Voltage Source Phase Sources",
+      "table": "voltage_source_phase_sources",
+      "class": null,
+      "description": "",
+      "fields": [
+        {
+          "name": "voltage_source_equipment_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "phase_source_uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "position",
+          "sql_type": "INTEGER",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 3
+    },
+    {
+      "id": "winding_equipment",
+      "name": "Winding Equipment",
+      "table": "winding_equipment",
+      "class": "WindingEquipment",
+      "description": "Data model for winding.",
+      "fields": [
+        {
+          "name": "uuid",
+          "sql_type": "UUID",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": true
+        },
+        {
+          "name": "rated_power_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "rated_power_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "voltage_value",
+          "sql_type": "NUMERIC",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "voltage_units",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "num_phases",
+          "sql_type": "INTEGER",
+          "python_type": "Annotated[int, Field(..., ge=1, le=3, description='Number of phases for this winding.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tap_position",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "total_taps",
+          "sql_type": "INTEGER",
+          "python_type": "Annotated[int, Field(default=32, description='Total number of taps along the bandwidth.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "is_grounded",
+          "sql_type": "BOOLEAN",
+          "python_type": "Annotated[bool, Field(..., description='Is this winding grounded or not.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "connection_type",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[ConnectionType, Field(..., description='Connection type for this winding.')]",
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "resistance_pct",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "reactance_pct",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "no_load_loss_pct",
+          "sql_type": "FLOAT",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tap_side",
+          "sql_type": "VARCHAR",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        },
+        {
+          "name": "tap_limits_json",
+          "sql_type": "JSONB",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false
+        }
+      ],
+      "field_count": 15
+    }
+  ],
+  "dataset_count": 55,
+  "generated_at": "2026-01-23"
+}
