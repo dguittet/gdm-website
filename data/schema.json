@@ -21,132 +21,156 @@
         {
           "name": "ac_resistance_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length positive alternating current resistance of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Per unit length positive alternating current resistance of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "ac_resistance_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length positive alternating current resistance of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Per unit length positive alternating current resistance of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "dc_resistance_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length positive direct current resistance of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Per unit length positive direct current resistance of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "dc_resistance_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length positive direct current resistance of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Per unit length positive direct current resistance of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "conductor_diameter_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Diameter of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "conductor_diameter_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Diameter of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "conductor_gmr_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Geometric mean radius of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "conductor_gmr_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Geometric mean radius of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "ampacity_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Ampacity of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "ampacity_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Ampacity of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "emergency_ampacity_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Emergency ampacity for this conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Emergency ampacity for this conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "emergency_ampacity_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Emergency ampacity for this conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Emergency ampacity for this conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         }
@@ -196,10 +220,10 @@
         {
           "name": "rated_energy_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[EnergyDC, PINT_SCHEMA, Field(..., description='Rated energy capacity (DC) of the battery.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Rated energy capacity (DC) of the battery.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -207,10 +231,10 @@
         {
           "name": "rated_energy_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[EnergyDC, PINT_SCHEMA, Field(..., description='Rated energy capacity (DC) of the battery.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Rated energy capacity (DC) of the battery.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -318,7 +342,7 @@
           "python_type": "Annotated[ConnectionType, Field(ConnectionType.STAR, description='Connection type for this capacitor.')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Connection type for this capacitor.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -326,22 +350,26 @@
         {
           "name": "rated_voltage_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Voltage, Field(..., description='Rated voltage for this capacitor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated voltage for this capacitor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "rated_voltage_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Voltage, Field(..., description='Rated voltage for this capacitor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated voltage for this capacitor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -350,8 +378,8 @@
           "sql_type": "VARCHAR",
           "python_type": "Annotated[VoltageTypes, Field(..., description='Rated voltage is line to line or line to neutral.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Rated voltage is line to line or line to neutral.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -596,44 +624,52 @@
         {
           "name": "conductor_gmr_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Geometric mean radius of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "conductor_gmr_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Geometric mean radius of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "phase_ac_resistance_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length conductor ac resistance.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Per unit length conductor ac resistance.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "phase_ac_resistance_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length conductor ac resistance.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Per unit length conductor ac resistance.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -662,66 +698,78 @@
         {
           "name": "conductor_diameter_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the conductor inside cable.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Diameter of the conductor inside cable.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "conductor_diameter_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the conductor inside cable.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Diameter of the conductor inside cable.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "strand_gmr_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the strand.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Geometric mean radius of the strand.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "strand_gmr_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the strand.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Geometric mean radius of the strand.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "strand_ac_resistance_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length ac resistance of the strand.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Per unit length ac resistance of the strand.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "strand_ac_resistance_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length ac resistance of the strand.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Per unit length ac resistance of the strand.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -761,22 +809,26 @@
         {
           "name": "strand_diameter_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the cable strand.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Diameter of the cable strand.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "strand_diameter_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the cable strand.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Diameter of the cable strand.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -805,22 +857,26 @@
         {
           "name": "ampacity_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Ampacity of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "ampacity_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Ampacity of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -892,10 +948,10 @@
         {
           "name": "active_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, Field(..., description='Current active power output of the battery.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Current active power output of the battery.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -903,10 +959,10 @@
         {
           "name": "active_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, Field(..., description='Current active power output of the battery.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Current active power output of the battery.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -914,10 +970,10 @@
         {
           "name": "reactive_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ReactivePower, Field(..., description='Current reactive power output of the battery.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Current reactive power output of the battery.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -925,10 +981,10 @@
         {
           "name": "reactive_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ReactivePower, Field(..., description='Current reactive power output of the battery.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Current reactive power output of the battery.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -1025,8 +1081,8 @@
           "sql_type": "VARCHAR",
           "python_type": "Annotated[VoltageTypes, Field(..., description='Voltage types for buses.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Voltage types for buses.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -1424,32 +1480,36 @@
         {
           "name": "active_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, Field(..., description='Active power output of the inverter.', ge=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Active power output of the inverter.",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "active_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, Field(..., description='Active power output of the inverter.', ge=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Active power output of the inverter.",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "reactive_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ReactivePower, Field(..., description='Reactive power output of the inverter.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Reactive power output of the inverter.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -1457,10 +1517,10 @@
         {
           "name": "reactive_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ReactivePower, Field(..., description='Reactive power output of the inverter.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Reactive power output of the inverter.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -1468,22 +1528,26 @@
         {
           "name": "irradiance_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Irradiance, Field(..., description='Irradiance incident on the PV array.', ge=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Irradiance incident on the PV array.",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "irradiance_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Irradiance, Field(..., description='Irradiance incident on the PV array.', ge=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Irradiance incident on the PV array.",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -1719,9 +1783,12 @@
           "sql_type": "FLOAT",
           "python_type": "Annotated[float, Field(..., strict=True, ge=0, le=100, description='Percentage no load losses for this transformer.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Percentage no load losses for this transformer.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -1730,9 +1797,12 @@
           "sql_type": "FLOAT",
           "python_type": "Annotated[float, Field(..., strict=True, ge=0, le=100, description='Percentage no load losses for this transformer.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Percentage no load losses for this transformer.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -1741,8 +1811,8 @@
           "sql_type": "BOOLEAN",
           "python_type": "Annotated[bool, Field(..., description='Is this transformer center tapped.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Is this transformer center tapped.",
           "constraints": [],
           "default_value": "FALSE",
           "is_primary_key": false
@@ -1753,7 +1823,7 @@
           "python_type": "Annotated[TransformerMounting, Field(TransformerMounting.POLE_MOUNT, description='Transformer mounting type.')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Transformer mounting type.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -2902,10 +2972,10 @@
         {
           "name": "delay_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Time, PINT_SCHEMA, Field(description='Delay time before blowing the fuse.')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Delay time before blowing the fuse.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -2913,10 +2983,10 @@
         {
           "name": "delay_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Time, PINT_SCHEMA, Field(description='Delay time before blowing the fuse.')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Delay time before blowing the fuse.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3513,66 +3583,78 @@
         {
           "name": "rated_reactive_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ReactivePower, PINT_SCHEMA, Field(..., description='Rated reactive power of this capacitor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated reactive power of this capacitor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "rated_reactive_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ReactivePower, PINT_SCHEMA, Field(..., description='Rated reactive power of this capacitor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated reactive power of this capacitor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "resistance_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Resistance, PINT_SCHEMA, Field(Resistance(0, 'ohm'), description='Positive resistance for the capacitor.', ge=0)]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
+          "description": "Positive resistance for the capacitor.",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "resistance_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Resistance, PINT_SCHEMA, Field(Resistance(0, 'ohm'), description='Positive resistance for the capacitor.', ge=0)]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
+          "description": "Positive resistance for the capacitor.",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "reactance_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Reactance, PINT_SCHEMA, Field(Reactance(0, 'ohm'), description='Positive reactance for the capacitor.', ge=0)]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
+          "description": "Positive reactance for the capacitor.",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "reactance_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Reactance, PINT_SCHEMA, Field(Reactance(0, 'ohm'), description='Positive reactance for the capacitor.', ge=0)]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
+          "description": "Positive reactance for the capacitor.",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -3582,7 +3664,7 @@
           "python_type": "Annotated[PositiveInt, Field(1, description='Number of banks in the capacitor.')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Number of banks in the capacitor.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3592,8 +3674,8 @@
           "sql_type": "INTEGER",
           "python_type": "Annotated[NonNegativeInt, Field(..., description='Number of banks currently on.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Number of banks currently on.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3622,45 +3704,45 @@
         {
           "name": "real_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, PINT_SCHEMA, Field(default=ActivePower(0, 'kilowatt'), description='Base real power for the ZIP model. (P_0) ')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Base real power for the ZIP model. (P_0) ",
           "constraints": [],
-          "default_value": null,
+          "default_value": "ActivePower(0, 'kilowatt')",
           "is_primary_key": false
         },
         {
           "name": "real_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, PINT_SCHEMA, Field(default=ActivePower(0, 'kilowatt'), description='Base real power for the ZIP model. (P_0) ')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Base real power for the ZIP model. (P_0) ",
           "constraints": [],
-          "default_value": null,
+          "default_value": "ActivePower(0, 'kilowatt')",
           "is_primary_key": false
         },
         {
           "name": "reactive_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ReactivePower, PINT_SCHEMA, Field(default=ReactivePower(0, 'kilovar'), description='Base reactive power for the ZIP model. (Q_0) ')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Base reactive power for the ZIP model. (Q_0) ",
           "constraints": [],
-          "default_value": null,
+          "default_value": "ReactivePower(0, 'kilovar')",
           "is_primary_key": false
         },
         {
           "name": "reactive_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ReactivePower, PINT_SCHEMA, Field(default=ReactivePower(0, 'kilovar'), description='Base reactive power for the ZIP model. (Q_0) ')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Base reactive power for the ZIP model. (Q_0) ",
           "constraints": [],
-          "default_value": null,
+          "default_value": "ReactivePower(0, 'kilovar')",
           "is_primary_key": false
         },
         {
@@ -3669,7 +3751,7 @@
           "python_type": "Annotated[float, Field(description='Constant impedance zip load real component. (a_p)')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Constant impedance zip load real component. (a_p)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3680,7 +3762,7 @@
           "python_type": "Annotated[float, Field(description='Constant impedance zip load imaginary component. (a_q)')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Constant impedance zip load imaginary component. (a_q)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3691,7 +3773,7 @@
           "python_type": "Annotated[float, Field(description='Constant current zip load real component. (b_p)')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Constant current zip load real component. (b_p)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3702,7 +3784,7 @@
           "python_type": "Annotated[float, Field(description='Constant current zip load imaginary component. (b_q)')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Constant current zip load imaginary component. (b_q)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3713,7 +3795,7 @@
           "python_type": "Annotated[float, Field(description='Constant power zip load real component. (c_p)')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Constant power zip load real component. (c_p)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3724,7 +3806,7 @@
           "python_type": "Annotated[float, Field(description='Constant power zip load imaginary component. (c_q)')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Constant power zip load imaginary component. (c_q)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -3735,7 +3817,7 @@
           "python_type": "Annotated[Optional[PositiveInt], Field(None, description='Number of customers for this load')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Number of customers for this load",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -4135,22 +4217,26 @@
         {
           "name": "ampacity_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Ampacity of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "ampacity_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Ampacity of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -4741,22 +4827,26 @@
         {
           "name": "rated_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ApparentPower, PINT_SCHEMA, Field(..., description='Rated power for this winding.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated power for this winding.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
         {
           "name": "rated_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ApparentPower, PINT_SCHEMA, Field(..., description='Rated power for this winding.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated power for this winding.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -4787,9 +4877,12 @@
           "sql_type": "INTEGER",
           "python_type": "Annotated[int, Field(..., ge=1, le=3, description='Number of phases for this winding.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Number of phases for this winding.",
+          "constraints": [
+            ">= 1",
+            "<= 3"
+          ],
           "default_value": null,
           "is_primary_key": false
         },
@@ -4810,9 +4903,9 @@
           "python_type": "Annotated[int, Field(default=32, description='Total number of taps along the bandwidth.')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Total number of taps along the bandwidth.",
           "constraints": [],
-          "default_value": null,
+          "default_value": "32",
           "is_primary_key": false
         },
         {
@@ -4820,8 +4913,8 @@
           "sql_type": "BOOLEAN",
           "python_type": "Annotated[bool, Field(..., description='Is this winding grounded or not.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Is this winding grounded or not.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
@@ -4831,8 +4924,8 @@
           "sql_type": "VARCHAR",
           "python_type": "Annotated[ConnectionType, Field(..., description='Connection type for this winding.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Connection type for this winding.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false
