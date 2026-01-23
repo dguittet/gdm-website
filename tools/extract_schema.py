@@ -107,10 +107,26 @@ def extract_field_info(class_source: str, class_name: str) -> List[Dict[str, Any
                     except:
                         pass
                     
-                    # Extract from Field(...) call if present
-                    if isinstance(item.value, ast.Call):
-                        # Check if it's a Field call
-                        for keyword in item.value.keywords:
+                    # Look for Field(...) in Annotated[Type, Field(...)]
+                    field_call = None
+                    if isinstance(item.annotation, ast.Subscript):
+                        # Check if this is Annotated[...]
+                        if isinstance(item.annotation.slice, ast.Tuple):
+                            for elt in item.annotation.slice.elts:
+                                if isinstance(elt, ast.Call):
+                                    # Check if it's a Field call
+                                    if isinstance(elt.func, ast.Name) and elt.func.id == 'Field':
+                                        field_call = elt
+                                        break
+                    
+                    # Also check for direct Field(...) assignment (old style)
+                    if field_call is None and isinstance(item.value, ast.Call):
+                        if isinstance(item.value.func, ast.Name) and item.value.func.id == 'Field':
+                            field_call = item.value
+                    
+                    # Extract from Field(...) call if found
+                    if field_call is not None:
+                        for keyword in field_call.keywords:
                             if keyword.arg == 'description':
                                 if isinstance(keyword.value, ast.Constant):
                                     field_info['description'] = keyword.value.value
@@ -145,7 +161,7 @@ def extract_field_info(class_source: str, class_name: str) -> List[Dict[str, Any
                                     pass
                         
                         # Check if Field has ... (required)
-                        if any(isinstance(arg, ast.Constant) and arg.value is ... for arg in item.value.args):
+                        if any(isinstance(arg, ast.Constant) and arg.value is ... for arg in field_call.args):
                             field_info['required'] = True
                     
                     fields.append(field_info)
@@ -263,7 +279,18 @@ def merge_schema_data(sql_tables: Dict, python_classes: Dict) -> Dict:
         fields = []
         for col in table_info['columns']:
             col_name = col['name']
+            
+            # Try direct match first
             python_field = python_fields.get(col_name, {})
+            
+            # If not found and field ends with _value or _units, try matching base name
+            # This handles Quantity fields that get split into value/units in SQL
+            if not python_field and (col_name.endswith('_value') or col_name.endswith('_units')):
+                if col_name.endswith('_value'):
+                    base_name = col_name[:-6]  # Remove '_value'
+                elif col_name.endswith('_units'):
+                    base_name = col_name[:-6]  # Remove '_units'
+                python_field = python_fields.get(base_name, {})
             
             field_data = {
                 'name': col_name,
