@@ -382,6 +382,11 @@
       "field_count": 9,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "distribution_battery",
+          "via": "battery_equipment_uuid"
+        },
+        {
           "type": "references",
           "table": "equipment_component_base",
           "via": "uuid"
@@ -412,17 +417,17 @@
         },
         {
           "name": "limitset_uuid",
-          "sql_type": "UUID,",
+          "sql_type": "UUID",
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to voltage_limitset)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "voltage_limitset",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
@@ -432,6 +437,11 @@
           "type": "references",
           "table": "distribution_bus",
           "via": "bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "voltage_limitset",
+          "via": "limitset_uuid"
         }
       ]
     },
@@ -524,6 +534,11 @@
       ],
       "field_count": 5,
       "relationships": [
+        {
+          "type": "referenced_by",
+          "table": "distribution_capacitor",
+          "via": "equipment_uuid"
+        },
         {
           "type": "references",
           "table": "equipment_component_base",
@@ -737,6 +752,11 @@
           "type": "referenced_by",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "referenced_by",
+          "table": "matrix_impedance_recloser",
+          "via": "controller_uuid"
         },
         {
           "type": "referenced_by",
@@ -1452,13 +1472,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to battery_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "battery_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -1467,13 +1487,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to inverter_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "inverter_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -1482,13 +1502,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to inverter_controller)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "inverter_controller",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
@@ -1503,6 +1523,21 @@
           "type": "references",
           "table": "distribution_bus",
           "via": "bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "battery_equipment",
+          "via": "battery_equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "inverter_equipment",
+          "via": "inverter_equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "inverter_controller",
+          "via": "inverter_controller_uuid"
         }
       ]
     },
@@ -1841,13 +1876,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to capacitor_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "capacitor_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -1856,13 +1891,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to voltage_capacitor_controller)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "voltage_capacitor_controller",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -1892,6 +1927,16 @@
           "type": "references",
           "table": "distribution_bus",
           "via": "bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "capacitor_equipment",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "voltage_capacitor_controller",
+          "via": "controller_uuid"
         }
       ]
     },
@@ -2202,13 +2247,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to load_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "load_equipment",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
@@ -2223,6 +2268,11 @@
           "type": "references",
           "table": "distribution_bus",
           "via": "bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "load_equipment",
+          "via": "equipment_uuid"
         }
       ]
     },
@@ -2254,13 +2304,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_transformer_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_transformer_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2269,13 +2319,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to regulator_controller)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "regulator_controller",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2300,6 +2350,16 @@
           "type": "references",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_transformer_equipment",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "regulator_controller",
+          "via": "controller_uuid"
         },
         {
           "type": "references",
@@ -2454,13 +2514,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to inverter_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "inverter_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2469,13 +2529,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to solar_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "solar_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2484,13 +2544,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to inverter_controller)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "inverter_controller",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
@@ -2505,6 +2565,21 @@
           "type": "references",
           "table": "distribution_bus",
           "via": "bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "inverter_equipment",
+          "via": "inverter_equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "solar_equipment",
+          "via": "solar_equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "inverter_controller",
+          "via": "inverter_controller_uuid"
         }
       ]
     },
@@ -2705,17 +2780,17 @@
         },
         {
           "name": "equipment_uuid",
-          "sql_type": "UUID,",
+          "sql_type": "UUID",
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_transformer_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_transformer_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2755,6 +2830,11 @@
           "type": "references",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_transformer_equipment",
+          "via": "equipment_uuid"
         },
         {
           "type": "references",
@@ -2900,6 +2980,16 @@
       "field_count": 7,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "distribution_transformer",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "referenced_by",
+          "table": "distribution_regulator",
+          "via": "equipment_uuid"
+        },
+        {
           "type": "references",
           "table": "equipment_component_base",
           "via": "uuid"
@@ -2954,13 +3044,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to voltage_source_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "voltage_source_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -3035,6 +3125,11 @@
           "type": "references",
           "table": "distribution_bus",
           "via": "bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "voltage_source_equipment",
+          "via": "equipment_uuid"
         }
       ]
     },
@@ -3140,6 +3235,11 @@
         },
         {
           "type": "referenced_by",
+          "table": "geometry_conductors",
+          "via": "conductor_equipment_uuid"
+        },
+        {
+          "type": "referenced_by",
           "table": "bare_conductor_equipment",
           "via": "uuid"
         },
@@ -3219,17 +3319,17 @@
         },
         {
           "name": "equipment_uuid",
-          "sql_type": "UUID,",
+          "sql_type": "UUID",
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to geometry_branch_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "geometry_branch_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -3314,6 +3414,11 @@
           "type": "references",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "geometry_branch_equipment",
+          "via": "equipment_uuid"
         },
         {
           "type": "references",
@@ -3428,6 +3533,11 @@
       "field_count": 6,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "geometry_branch",
+          "via": "equipment_uuid"
+        },
+        {
           "type": "references",
           "table": "equipment_component_base",
           "via": "uuid"
@@ -3463,17 +3573,17 @@
         },
         {
           "name": "conductor_equipment_uuid",
-          "sql_type": "UUID,",
+          "sql_type": "UUID",
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to equipment_component_base)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "equipment_component_base",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -3498,6 +3608,11 @@
           "type": "references",
           "table": "geometry_branch_equipment",
           "via": "geometry_branch_equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "equipment_component_base",
+          "via": "conductor_equipment_uuid"
         }
       ]
     },
@@ -3556,6 +3671,16 @@
       ],
       "field_count": 3,
       "relationships": [
+        {
+          "type": "referenced_by",
+          "table": "distribution_solar",
+          "via": "inverter_controller_uuid"
+        },
+        {
+          "type": "referenced_by",
+          "table": "distribution_battery",
+          "via": "inverter_controller_uuid"
+        },
         {
           "type": "references",
           "table": "component_base",
@@ -3694,6 +3819,16 @@
       "field_count": 8,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "distribution_solar",
+          "via": "inverter_equipment_uuid"
+        },
+        {
+          "type": "referenced_by",
+          "table": "distribution_battery",
+          "via": "inverter_equipment_uuid"
+        },
+        {
           "type": "references",
           "table": "equipment_component_base",
           "via": "uuid"
@@ -3740,6 +3875,11 @@
       ],
       "field_count": 2,
       "relationships": [
+        {
+          "type": "referenced_by",
+          "table": "distribution_load",
+          "via": "equipment_uuid"
+        },
         {
           "type": "references",
           "table": "equipment_component_base",
@@ -3925,17 +4065,17 @@
         },
         {
           "name": "equipment_uuid",
-          "sql_type": "UUID,",
+          "sql_type": "UUID",
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to matrix_impedance_branch_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "matrix_impedance_branch_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -4020,6 +4160,11 @@
           "type": "references",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "matrix_impedance_branch_equipment",
+          "via": "equipment_uuid"
         },
         {
           "type": "references",
@@ -4284,6 +4429,11 @@
       "field_count": 16,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "matrix_impedance_branch",
+          "via": "equipment_uuid"
+        },
+        {
           "type": "references",
           "table": "equipment_component_base",
           "via": "uuid"
@@ -4318,13 +4468,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to matrix_impedance_fuse_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "matrix_impedance_fuse_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -4364,6 +4514,11 @@
           "type": "references",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "matrix_impedance_fuse_equipment",
+          "via": "equipment_uuid"
         },
         {
           "type": "references",
@@ -4733,6 +4888,11 @@
       "field_count": 23,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "matrix_impedance_fuse",
+          "via": "equipment_uuid"
+        },
+        {
           "type": "references",
           "table": "equipment_component_base",
           "via": "uuid"
@@ -4767,28 +4927,28 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to matrix_impedance_recloser_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "matrix_impedance_recloser_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
           "name": "controller_uuid",
-          "sql_type": "UUID,",
+          "sql_type": "UUID",
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to component_base)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "component_base",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -4828,6 +4988,16 @@
           "type": "references",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "matrix_impedance_recloser_equipment",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "component_base",
+          "via": "controller_uuid"
         },
         {
           "type": "references",
@@ -5092,6 +5262,11 @@
       "field_count": 16,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "matrix_impedance_recloser",
+          "via": "equipment_uuid"
+        },
+        {
           "type": "references",
           "table": "equipment_component_base",
           "via": "uuid"
@@ -5126,13 +5301,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to matrix_impedance_switch_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "matrix_impedance_switch_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -5187,6 +5362,11 @@
           "type": "references",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "matrix_impedance_switch_equipment",
+          "via": "equipment_uuid"
         },
         {
           "type": "references",
@@ -5465,6 +5645,11 @@
       ],
       "field_count": 17,
       "relationships": [
+        {
+          "type": "referenced_by",
+          "table": "matrix_impedance_switch",
+          "via": "equipment_uuid"
+        },
         {
           "type": "references",
           "table": "equipment_component_base",
@@ -6056,6 +6241,11 @@
       "field_count": 5,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "distribution_regulator",
+          "via": "controller_uuid"
+        },
+        {
           "type": "references",
           "table": "component_base",
           "via": "uuid"
@@ -6086,17 +6276,17 @@
         },
         {
           "name": "equipment_uuid",
-          "sql_type": "UUID,",
+          "sql_type": "UUID",
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to sequence_impedance_branch_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "sequence_impedance_branch_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -6181,6 +6371,11 @@
           "type": "references",
           "table": "distribution_component_base",
           "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "sequence_impedance_branch_equipment",
+          "via": "equipment_uuid"
         },
         {
           "type": "references",
@@ -6449,6 +6644,11 @@
       "field_count": 16,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "sequence_impedance_branch",
+          "via": "equipment_uuid"
+        },
+        {
           "type": "references",
           "table": "equipment_component_base",
           "via": "uuid"
@@ -6570,6 +6770,11 @@
       ],
       "field_count": 7,
       "relationships": [
+        {
+          "type": "referenced_by",
+          "table": "distribution_solar",
+          "via": "solar_equipment_uuid"
+        },
         {
           "type": "references",
           "table": "equipment_component_base",
@@ -7036,6 +7241,11 @@
       "field_count": 3,
       "relationships": [
         {
+          "type": "referenced_by",
+          "table": "distribution_capacitor",
+          "via": "controller_uuid"
+        },
+        {
           "type": "references",
           "table": "component_base",
           "via": "uuid"
@@ -7097,6 +7307,11 @@
       ],
       "field_count": 3,
       "relationships": [
+        {
+          "type": "referenced_by",
+          "table": "bus_voltagelimits",
+          "via": "limitset_uuid"
+        },
         {
           "type": "references",
           "table": "component_base",
@@ -7174,6 +7389,11 @@
       ],
       "field_count": 4,
       "relationships": [
+        {
+          "type": "referenced_by",
+          "table": "distribution_voltage_source",
+          "via": "equipment_uuid"
+        },
         {
           "type": "references",
           "table": "equipment_component_base",
