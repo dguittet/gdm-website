@@ -3780,8 +3780,8 @@
       "id": "load_equipment",
       "name": "Load Equipment",
       "table": "load_equipment",
-      "class": null,
-      "description": "",
+      "class": "LoadEquipment",
+      "description": "Data model for load model.",
       "fields": [
         {
           "name": "uuid",
@@ -3801,10 +3801,10 @@
         {
           "name": "connection_type",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ConnectionType, Field(ConnectionType.STAR, description='Connection type for multi phase load.')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Connection type for multi phase load.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
