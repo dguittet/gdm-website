@@ -802,7 +802,7 @@
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_recloser",
+          "table": "distribution_matrix_impedance_recloser",
           "via": "controller_uuid"
         },
         {
@@ -1746,22 +1746,22 @@
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_branch",
+          "table": "distribution_matrix_impedance_branch",
           "via": "from_bus_uuid"
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_branch",
+          "table": "distribution_matrix_impedance_branch",
           "via": "to_bus_uuid"
         },
         {
           "type": "referenced_by",
-          "table": "sequence_impedance_branch",
+          "table": "distribution_sequence_impedance_branch",
           "via": "from_bus_uuid"
         },
         {
           "type": "referenced_by",
-          "table": "sequence_impedance_branch",
+          "table": "distribution_sequence_impedance_branch",
           "via": "to_bus_uuid"
         },
         {
@@ -1776,32 +1776,32 @@
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_switch",
+          "table": "distribution_matrix_impedance_switch",
           "via": "from_bus_uuid"
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_switch",
+          "table": "distribution_matrix_impedance_switch",
           "via": "to_bus_uuid"
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_fuse",
+          "table": "distribution_matrix_impedance_fuse",
           "via": "from_bus_uuid"
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_fuse",
+          "table": "distribution_matrix_impedance_fuse",
           "via": "to_bus_uuid"
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_recloser",
+          "table": "distribution_matrix_impedance_recloser",
           "via": "from_bus_uuid"
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_recloser",
+          "table": "distribution_matrix_impedance_recloser",
           "via": "to_bus_uuid"
         },
         {
@@ -2065,12 +2065,12 @@
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_branch",
+          "table": "distribution_matrix_impedance_branch",
           "via": "uuid"
         },
         {
           "type": "referenced_by",
-          "table": "sequence_impedance_branch",
+          "table": "distribution_sequence_impedance_branch",
           "via": "uuid"
         },
         {
@@ -2080,17 +2080,17 @@
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_switch",
+          "table": "distribution_matrix_impedance_switch",
           "via": "uuid"
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_fuse",
+          "table": "distribution_matrix_impedance_fuse",
           "via": "uuid"
         },
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_recloser",
+          "table": "distribution_matrix_impedance_recloser",
           "via": "uuid"
         },
         {
@@ -2277,13 +2277,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (also primary key, links to distribution_component_base)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": true,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_component_base",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2292,13 +2292,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to matrix_impedance_branch_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "matrix_impedance_branch_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2307,14 +2307,14 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Original value from source system",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
           "references_table": null,
           "references_column": null,
-          "is_derived": false
+          "is_derived": true
         },
         {
           "name": "length_units_original",
@@ -2322,14 +2322,14 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Original units from source system",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
           "references_table": null,
           "references_column": null,
-          "is_derived": false
+          "is_derived": true
         },
         {
           "name": "length_value_si",
@@ -2337,14 +2337,14 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Derived from length (normalized to SI units) [Derived from: length]",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
           "references_table": null,
           "references_column": null,
-          "is_derived": false
+          "is_derived": true
         },
         {
           "name": "from_bus_uuid",
@@ -2352,13 +2352,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2367,18 +2367,39 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
       "field_count": 7,
-      "relationships": []
+      "relationships": [
+        {
+          "type": "references",
+          "table": "distribution_component_base",
+          "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "matrix_impedance_branch_equipment",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "from_bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "to_bus_uuid"
+        }
+      ]
     },
     {
       "id": "distribution_matrix_impedance_fuse",
@@ -2393,13 +2414,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (also primary key, links to distribution_component_base)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": true,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_component_base",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2408,13 +2429,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to matrix_impedance_fuse_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "matrix_impedance_fuse_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2423,13 +2444,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2438,18 +2459,39 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
       "field_count": 4,
-      "relationships": []
+      "relationships": [
+        {
+          "type": "references",
+          "table": "distribution_component_base",
+          "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "matrix_impedance_fuse_equipment",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "from_bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "to_bus_uuid"
+        }
+      ]
     },
     {
       "id": "distribution_matrix_impedance_recloser",
@@ -2464,13 +2506,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (also primary key, links to distribution_component_base)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": true,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_component_base",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2479,13 +2521,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to matrix_impedance_recloser_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "matrix_impedance_recloser_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2494,13 +2536,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to component_base)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "component_base",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2509,13 +2551,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2524,18 +2566,44 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
       "field_count": 5,
-      "relationships": []
+      "relationships": [
+        {
+          "type": "references",
+          "table": "distribution_component_base",
+          "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "matrix_impedance_recloser_equipment",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "component_base",
+          "via": "controller_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "from_bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "to_bus_uuid"
+        }
+      ]
     },
     {
       "id": "distribution_matrix_impedance_switch",
@@ -2550,13 +2618,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (also primary key, links to distribution_component_base)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": true,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_component_base",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2565,13 +2633,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to matrix_impedance_switch_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "matrix_impedance_switch_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2595,13 +2663,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2610,18 +2678,39 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
       "field_count": 5,
-      "relationships": []
+      "relationships": [
+        {
+          "type": "references",
+          "table": "distribution_component_base",
+          "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "matrix_impedance_switch_equipment",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "from_bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "to_bus_uuid"
+        }
+      ]
     },
     {
       "id": "distribution_regulator",
@@ -2733,13 +2822,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (also primary key, links to distribution_component_base)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": true,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_component_base",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2748,13 +2837,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to sequence_impedance_branch_equipment)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "sequence_impedance_branch_equipment",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2763,14 +2852,14 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Original value from source system",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
           "references_table": null,
           "references_column": null,
-          "is_derived": false
+          "is_derived": true
         },
         {
           "name": "length_units_original",
@@ -2778,14 +2867,14 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Original units from source system",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
           "references_table": null,
           "references_column": null,
-          "is_derived": false
+          "is_derived": true
         },
         {
           "name": "length_value_si",
@@ -2793,14 +2882,14 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Derived from length (normalized to SI units) [Derived from: length]",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
           "references_table": null,
           "references_column": null,
-          "is_derived": false
+          "is_derived": true
         },
         {
           "name": "from_bus_uuid",
@@ -2808,13 +2897,13 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         },
         {
@@ -2823,18 +2912,39 @@
           "python_type": null,
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": " (links to distribution_bus)",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
+          "is_foreign_key": true,
+          "references_table": "distribution_bus",
+          "references_column": "uuid",
           "is_derived": false
         }
       ],
       "field_count": 7,
-      "relationships": []
+      "relationships": [
+        {
+          "type": "references",
+          "table": "distribution_component_base",
+          "via": "uuid"
+        },
+        {
+          "type": "references",
+          "table": "sequence_impedance_branch_equipment",
+          "via": "equipment_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "from_bus_uuid"
+        },
+        {
+          "type": "references",
+          "table": "distribution_bus",
+          "via": "to_bus_uuid"
+        }
+      ]
     },
     {
       "id": "distribution_solar",
@@ -4709,7 +4819,7 @@
       "relationships": [
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_branch",
+          "table": "distribution_matrix_impedance_branch",
           "via": "equipment_uuid"
         },
         {
@@ -5076,7 +5186,7 @@
       "relationships": [
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_fuse",
+          "table": "distribution_matrix_impedance_fuse",
           "via": "equipment_uuid"
         },
         {
@@ -5338,7 +5448,7 @@
       "relationships": [
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_recloser",
+          "table": "distribution_matrix_impedance_recloser",
           "via": "equipment_uuid"
         },
         {
@@ -5615,7 +5725,7 @@
       "relationships": [
         {
           "type": "referenced_by",
-          "table": "matrix_impedance_switch",
+          "table": "distribution_matrix_impedance_switch",
           "via": "equipment_uuid"
         },
         {
@@ -6555,7 +6665,7 @@
       "relationships": [
         {
           "type": "referenced_by",
-          "table": "sequence_impedance_branch",
+          "table": "distribution_sequence_impedance_branch",
           "via": "equipment_uuid"
         },
         {
