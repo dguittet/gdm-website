@@ -637,7 +637,7 @@
         },
         {
           "name": "position",
-          "sql_type": "INTEGER",
+          "sql_type": "INTEGER,",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -881,7 +881,7 @@
         },
         {
           "name": "position",
-          "sql_type": "INTEGER",
+          "sql_type": "INTEGER,",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -943,7 +943,7 @@
         },
         {
           "name": "position",
-          "sql_type": "INTEGER",
+          "sql_type": "INTEGER,",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -3486,7 +3486,7 @@
         },
         {
           "name": "position",
-          "sql_type": "INTEGER",
+          "sql_type": "INTEGER,",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -3872,7 +3872,7 @@
         },
         {
           "name": "position",
-          "sql_type": "INTEGER",
+          "sql_type": "INTEGER,",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -7206,7 +7206,7 @@
         },
         {
           "name": "winding_number",
-          "sql_type": "INTEGER",
+          "sql_type": "INTEGER,",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -7464,7 +7464,7 @@
         },
         {
           "name": "position",
-          "sql_type": "INTEGER",
+          "sql_type": "INTEGER,",
           "python_type": null,
           "nullable": true,
           "required": false,
