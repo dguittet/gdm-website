@@ -1949,36 +1949,6 @@
         },
         {
           "name": "phase_code",
-          "sql_type": "VARCHAR,",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "external_id",
-          "sql_type": "VARCHAR,",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "source_system",
           "sql_type": "VARCHAR",
           "python_type": null,
           "nullable": true,
@@ -1993,7 +1963,7 @@
           "is_derived": false
         }
       ],
-      "field_count": 7,
+      "field_count": 5,
       "relationships": [
         {
           "type": "references",
