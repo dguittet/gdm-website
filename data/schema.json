@@ -2935,12 +2935,12 @@
           "is_derived": false
         },
         {
-          "name": "coupling_sequences_json",
+          "name": "coupling_sequences",
           "sql_type": "JSONB",
-          "python_type": null,
+          "python_type": "Annotated[list[SequencePair], Field(..., description='List of pair\\n            of sequence numbers for coupling ')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "List of pair\n            of sequence numbers for coupling ",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -2950,12 +2950,12 @@
           "is_derived": false
         },
         {
-          "name": "winding_reactances_json",
+          "name": "winding_reactances",
           "sql_type": "JSONB",
-          "python_type": null,
+          "python_type": "Annotated[list[Annotated[float, Field(strict=True, ge=0, le=100)]], Field(..., description='Winding coupling reactances in the\\n            \"same order as coupling sequences.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Winding coupling reactances in the\n            \"same order as coupling sequences.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
