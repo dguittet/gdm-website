@@ -3590,8 +3590,8 @@
       "id": "inverter_equipment",
       "name": "Inverter Equipment",
       "table": "inverter_equipment",
-      "class": null,
-      "description": "",
+      "class": "InverterEquipment",
+      "description": "Data model for inverter equipment.",
       "fields": [
         {
           "name": "uuid",
@@ -3611,11 +3611,13 @@
         {
           "name": "rated_apparent_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ApparentPower, PINT_SCHEMA, Field(..., description='Apparent power rating for the inverter.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Apparent power rating for the inverter.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -3626,11 +3628,13 @@
         {
           "name": "rated_apparent_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ApparentPower, PINT_SCHEMA, Field(..., description='Apparent power rating for the inverter.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Apparent power rating for the inverter.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -3639,12 +3643,12 @@
           "is_derived": false
         },
         {
-          "name": "active_power_limit_value",
+          "name": "rise_limit_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Optional[ActivePowerOverTime], PINT_SCHEMA, Field(..., description='The rise in power output allowed per unit of time')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "The rise in power output allowed per unit of time",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -3654,12 +3658,12 @@
           "is_derived": false
         },
         {
-          "name": "active_power_limit_units",
+          "name": "rise_limit_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Optional[ActivePowerOverTime], PINT_SCHEMA, Field(..., description='The rise in power output allowed per unit of time')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "The rise in power output allowed per unit of time",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -3669,12 +3673,12 @@
           "is_derived": false
         },
         {
-          "name": "reactive_power_limit_value",
+          "name": "fall_limit_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Optional[ActivePowerOverTime], PINT_SCHEMA, Field(..., description='The fall in power output allowed per unit of time')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "The fall in power output allowed per unit of time",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -3684,12 +3688,12 @@
           "is_derived": false
         },
         {
-          "name": "reactive_power_limit_units",
+          "name": "fall_limit_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Optional[ActivePowerOverTime], PINT_SCHEMA, Field(..., description='The fall in power output allowed per unit of time')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "The fall in power output allowed per unit of time",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -3699,13 +3703,52 @@
           "is_derived": false
         },
         {
-          "name": "efficiency",
+          "name": "cutout_percent",
           "sql_type": "FLOAT",
-          "python_type": null,
+          "python_type": "Annotated[float, Field(ge=0, le=100, description='If the per-unit power drops below this value the PV output is turned off.')]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
+          "description": "If the per-unit power drops below this value the PV output is turned off.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "cutin_percent",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(ge=0, le=100, description='If the per-unit power rises above this value the PV output is turned on.')]",
+          "nullable": true,
+          "required": false,
+          "description": "If the per-unit power rises above this value the PV output is turned on.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "dc_to_ac_efficiency",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(..., ge=0, le=100, description='DC to AC efficiency of the inverter.')]",
+          "nullable": true,
+          "required": true,
+          "description": "DC to AC efficiency of the inverter.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -3714,7 +3757,7 @@
           "is_derived": false
         }
       ],
-      "field_count": 8,
+      "field_count": 10,
       "relationships": [
         {
           "type": "referenced_by",
