@@ -5252,14 +5252,14 @@
           "is_derived": false
         },
         {
-          "name": "is_open",
-          "sql_type": "BOOLEAN",
+          "name": "is_closed",
+          "sql_type": "TEXT,",
           "python_type": null,
           "nullable": true,
           "required": false,
           "description": null,
           "constraints": [],
-          "default_value": "FALSE",
+          "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
           "references_table": null,
@@ -6855,7 +6855,7 @@
         },
         {
           "name": "limit_type",
-          "sql_type": "VARCHAR",
+          "sql_type": "VARCHAR,",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -6870,7 +6870,7 @@
         },
         {
           "name": "value_amps",
-          "sql_type": "NUMERIC",
+          "sql_type": "NUMERIC,",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -6884,8 +6884,8 @@
           "is_derived": false
         },
         {
-          "name": "duration_seconds",
-          "sql_type": "NUMERIC",
+          "name": "value_units",
+          "sql_type": "VARCHAR",
           "python_type": null,
           "nullable": true,
           "required": false,
