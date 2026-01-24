@@ -989,12 +989,12 @@
           "is_derived": false
         },
         {
-          "name": "conductor_gmr_value",
+          "name": "strand_diameter_value",
           "sql_type": "NUMERIC",
-          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the conductor.', gt=0)]",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the cable strand.', gt=0)]",
           "nullable": true,
           "required": true,
-          "description": "Geometric mean radius of the conductor.",
+          "description": "Diameter of the cable strand.",
           "constraints": [
             "> 0"
           ],
@@ -1006,79 +1006,15 @@
           "is_derived": false
         },
         {
-          "name": "conductor_gmr_units",
+          "name": "strand_diameter_units",
           "sql_type": "VARCHAR",
-          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the conductor.', gt=0)]",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the cable strand.', gt=0)]",
           "nullable": true,
           "required": true,
-          "description": "Geometric mean radius of the conductor.",
+          "description": "Diameter of the cable strand.",
           "constraints": [
             "> 0"
           ],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "phase_ac_resistance_value",
-          "sql_type": "NUMERIC",
-          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length conductor ac resistance.', gt=0)]",
-          "nullable": true,
-          "required": true,
-          "description": "Per unit length conductor ac resistance.",
-          "constraints": [
-            "> 0"
-          ],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "phase_ac_resistance_units",
-          "sql_type": "VARCHAR",
-          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length conductor ac resistance.', gt=0)]",
-          "nullable": true,
-          "required": true,
-          "description": "Per unit length conductor ac resistance.",
-          "constraints": [
-            "> 0"
-          ],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "phase_dc_resistance_value",
-          "sql_type": "NUMERIC",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "phase_dc_resistance_units",
-          "sql_type": "VARCHAR",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -1110,6 +1046,176 @@
           "nullable": true,
           "required": true,
           "description": "Diameter of the conductor inside cable.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "cable_diameter_value",
+          "sql_type": "NUMERIC",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the cable.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Diameter of the cable.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "cable_diameter_units",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the cable.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Diameter of the cable.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "insulation_thickness_value",
+          "sql_type": "NUMERIC",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Thickness of insulation.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Thickness of insulation.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "insulation_thickness_units",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Thickness of insulation.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Thickness of insulation.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "insulation_diameter_value",
+          "sql_type": "NUMERIC",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the insulation.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Diameter of the insulation.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "insulation_diameter_units",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the insulation.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Diameter of the insulation.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "ampacity_value",
+          "sql_type": "NUMERIC",
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Ampacity of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "ampacity_units",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Ampacity of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "conductor_gmr_value",
+          "sql_type": "NUMERIC",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the conductor.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Geometric mean radius of the conductor.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "conductor_gmr_units",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Geometric mean radius of the conductor.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Geometric mean radius of the conductor.",
           "constraints": [
             "> 0"
           ],
@@ -1155,6 +1261,40 @@
           "is_derived": false
         },
         {
+          "name": "phase_ac_resistance_value",
+          "sql_type": "NUMERIC",
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length conductor ac resistance.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Per unit length conductor ac resistance.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "phase_ac_resistance_units",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length conductor ac resistance.', gt=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Per unit length conductor ac resistance.",
+          "constraints": [
+            "> 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
           "name": "strand_ac_resistance_value",
           "sql_type": "NUMERIC",
           "python_type": "Annotated[ResistancePULength, PINT_SCHEMA, Field(..., description='Per unit length ac resistance of the strand.', gt=0)]",
@@ -1189,42 +1329,12 @@
           "is_derived": false
         },
         {
-          "name": "strand_dc_resistance_value",
-          "sql_type": "NUMERIC",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "strand_dc_resistance_units",
-          "sql_type": "VARCHAR",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "strand_count",
+          "name": "num_neutral_strands",
           "sql_type": "INTEGER",
-          "python_type": null,
+          "python_type": "Annotated[PositiveInt, Field(..., description='Number of neutral strands in the cable.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Number of neutral strands in the cable.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -1234,12 +1344,12 @@
           "is_derived": false
         },
         {
-          "name": "strand_diameter_value",
+          "name": "rated_voltage_value",
           "sql_type": "NUMERIC",
-          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the cable strand.', gt=0)]",
+          "python_type": "Annotated[Voltage, PINT_SCHEMA, Field(..., description='Rated voltage for the cable.', gt=0)]",
           "nullable": true,
           "required": true,
-          "description": "Diameter of the cable strand.",
+          "description": "Rated voltage for the cable.",
           "constraints": [
             "> 0"
           ],
@@ -1251,12 +1361,12 @@
           "is_derived": false
         },
         {
-          "name": "strand_diameter_units",
+          "name": "rated_voltage_units",
           "sql_type": "VARCHAR",
-          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Diameter of the cable strand.', gt=0)]",
+          "python_type": "Annotated[Voltage, PINT_SCHEMA, Field(..., description='Rated voltage for the cable.', gt=0)]",
           "nullable": true,
           "required": true,
-          "description": "Diameter of the cable strand.",
+          "description": "Rated voltage for the cable.",
           "constraints": [
             "> 0"
           ],
@@ -1268,91 +1378,12 @@
           "is_derived": false
         },
         {
-          "name": "diameter_over_insulation_value",
-          "sql_type": "NUMERIC",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "diameter_over_insulation_units",
+          "name": "insulation",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[WireInsulationType, PINT_SCHEMA, Field(WireInsulationType.PE, description='Wire insulation type')]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "ampacity_value",
-          "sql_type": "NUMERIC",
-          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
-          "nullable": true,
-          "required": true,
-          "description": "Ampacity of the conductor.",
-          "constraints": [
-            "> 0"
-          ],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "ampacity_units",
-          "sql_type": "VARCHAR",
-          "python_type": "Annotated[Current, PINT_SCHEMA, Field(..., description='Ampacity of the conductor.', gt=0)]",
-          "nullable": true,
-          "required": true,
-          "description": "Ampacity of the conductor.",
-          "constraints": [
-            "> 0"
-          ],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "emergency_ampacity_value",
-          "sql_type": "NUMERIC",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "emergency_ampacity_units",
-          "sql_type": "VARCHAR",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
+          "description": "Wire insulation type",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -1362,7 +1393,7 @@
           "is_derived": false
         }
       ],
-      "field_count": 24,
+      "field_count": 25,
       "relationships": [
         {
           "type": "references",
