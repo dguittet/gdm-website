@@ -6698,13 +6698,15 @@
           "is_derived": false
         },
         {
-          "name": "rated_capacity_value",
+          "name": "rated_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, PINT_SCHEMA, Field(..., description='Maximum power of the PV array for 1.0 kW/m^2 irradiance.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Maximum power of the PV array for 1.0 kW/m^2 irradiance.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -6713,13 +6715,15 @@
           "is_derived": false
         },
         {
-          "name": "rated_capacity_units",
+          "name": "rated_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, PINT_SCHEMA, Field(..., description='Maximum power of the PV array for 1.0 kW/m^2 irradiance.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Maximum power of the PV array for 1.0 kW/m^2 irradiance.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -6728,13 +6732,51 @@
           "is_derived": false
         },
         {
-          "name": "array_tilt_value",
+          "name": "resistance",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(..., strict=True, ge=0, le=100, description='Percentage internal resistance for the PV array.')]",
+          "nullable": true,
+          "required": true,
+          "description": "Percentage internal resistance for the PV array.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "reactance",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(..., strict=True, ge=0, le=100, description='Percentage internal reactance for the PV array.')]",
+          "nullable": true,
+          "required": true,
+          "description": "Percentage internal reactance for the PV array.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "rated_voltage_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Voltage, Field(..., description='Rated voltage for this solar equipment.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated voltage for this solar equipment.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -6743,13 +6785,15 @@
           "is_derived": false
         },
         {
-          "name": "array_tilt_units",
+          "name": "rated_voltage_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Voltage, Field(..., description='Rated voltage for this solar equipment.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated voltage for this solar equipment.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -6758,27 +6802,12 @@
           "is_derived": false
         },
         {
-          "name": "array_azimuth_value",
-          "sql_type": "NUMERIC",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "array_azimuth_units",
+          "name": "voltage_type",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[VoltageTypes, Field(..., description='Rated voltage is line to line or line to neutral.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Rated voltage is line to line or line to neutral.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -6788,7 +6817,7 @@
           "is_derived": false
         }
       ],
-      "field_count": 7,
+      "field_count": 8,
       "relationships": [
         {
           "type": "referenced_by",
