@@ -622,7 +622,7 @@
       "id": "component_base",
       "name": "Component Base",
       "table": "component_base",
-      "class": null,
+      "class": "Component",
       "description": "",
       "fields": [
         {
@@ -1884,7 +1884,7 @@
       "id": "distribution_component_base",
       "name": "Distribution Component Base",
       "table": "distribution_component_base",
-      "class": null,
+      "class": "InServiceDistributionComponentBase",
       "description": "",
       "fields": [
         {
@@ -1935,10 +1935,10 @@
         {
           "name": "in_service",
           "sql_type": "BOOLEAN",
-          "python_type": null,
+          "python_type": "Annotated[bool, Field(True, description='Is the component in service?')]",
           "nullable": true,
           "required": false,
-          "description": null,
+          "description": "Is the component in service?",
           "constraints": [],
           "default_value": "TRUE",
           "is_primary_key": false,
@@ -3017,7 +3017,7 @@
       "id": "equipment_component_base",
       "name": "Equipment Component Base",
       "table": "equipment_component_base",
-      "class": null,
+      "class": "EquipmentBase",
       "description": "",
       "fields": [
         {
