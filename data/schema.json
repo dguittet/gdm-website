@@ -259,36 +259,6 @@
           "is_derived": false
         },
         {
-          "name": "rated_capacity_value",
-          "sql_type": "NUMERIC",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "rated_capacity_units",
-          "sql_type": "VARCHAR",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
           "name": "rated_energy_value",
           "sql_type": "NUMERIC",
           "python_type": "Annotated[EnergyDC, PINT_SCHEMA, Field(..., description='Rated energy capacity (DC) of the battery.')]",
@@ -319,13 +289,15 @@
           "is_derived": false
         },
         {
-          "name": "initial_energy_value",
+          "name": "rated_power_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, PINT_SCHEMA, Field(..., description='Rated power of the battery', ge=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated power of the battery",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -334,13 +306,15 @@
           "is_derived": false
         },
         {
-          "name": "initial_energy_units",
+          "name": "rated_power_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[ActivePower, PINT_SCHEMA, Field(..., description='Rated power of the battery', ge=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Rated power of the battery",
+          "constraints": [
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -349,13 +323,16 @@
           "is_derived": false
         },
         {
-          "name": "charge_efficiency",
+          "name": "charging_efficiency",
           "sql_type": "FLOAT",
-          "python_type": null,
+          "python_type": "Annotated[float, Field(..., ge=0, le=100, description='Charging efficiency of the battery.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Charging efficiency of the battery.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -364,12 +341,82 @@
           "is_derived": false
         },
         {
-          "name": "discharge_efficiency",
+          "name": "discharging_efficiency",
           "sql_type": "FLOAT",
-          "python_type": null,
+          "python_type": "Annotated[float, Field(..., ge=0, le=100, description='Discharging efficiency of the battery.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Discharging efficiency of the battery.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "idling_efficiency",
+          "sql_type": "FLOAT",
+          "python_type": "Annotated[float, Field(..., ge=0, le=100, description='Idling efficiency of the battery.')]",
+          "nullable": true,
+          "required": true,
+          "description": "Idling efficiency of the battery.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "rated_voltage_value",
+          "sql_type": "NUMERIC",
+          "python_type": "Annotated[Voltage, Field(..., description='Rated voltage for this battery equipment.', ge=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Rated voltage for this battery equipment.",
+          "constraints": [
+            ">= 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "rated_voltage_units",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[Voltage, Field(..., description='Rated voltage for this battery equipment.', ge=0)]",
+          "nullable": true,
+          "required": true,
+          "description": "Rated voltage for this battery equipment.",
+          "constraints": [
+            ">= 0"
+          ],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "voltage_type",
+          "sql_type": "VARCHAR",
+          "python_type": "Annotated[VoltageTypes, Field(..., description='Rated voltage is line to line or line to neutral.')]",
+          "nullable": true,
+          "required": true,
+          "description": "Rated voltage is line to line or line to neutral.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -379,7 +426,7 @@
           "is_derived": false
         }
       ],
-      "field_count": 9,
+      "field_count": 11,
       "relationships": [
         {
           "type": "referenced_by",
