@@ -7534,13 +7534,15 @@
           "is_derived": false
         },
         {
-          "name": "voltage_value",
+          "name": "rated_voltage_value",
           "sql_type": "NUMERIC",
-          "python_type": null,
+          "python_type": "Annotated[Voltage, PINT_SCHEMA, Field(..., description='rated voltage rating for this winding.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "rated voltage rating for this winding.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -7549,13 +7551,15 @@
           "is_derived": false
         },
         {
-          "name": "voltage_units",
+          "name": "rated_voltage_units",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[Voltage, PINT_SCHEMA, Field(..., description='rated voltage rating for this winding.', gt=0)]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "rated voltage rating for this winding.",
+          "constraints": [
+            "> 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -7582,12 +7586,12 @@
           "is_derived": false
         },
         {
-          "name": "tap_position",
-          "sql_type": "FLOAT",
-          "python_type": null,
+          "name": "tap_positions",
+          "sql_type": "TEXT,",
+          "python_type": "Annotated[list[float], Field(..., description='List of per unit tap positions for each phase. Centered at 0.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "List of per unit tap positions for each phase. Centered at 0.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -7642,13 +7646,16 @@
           "is_derived": false
         },
         {
-          "name": "resistance_pct",
+          "name": "resistance",
           "sql_type": "FLOAT",
-          "python_type": null,
+          "python_type": "Annotated[float, Field(..., strict=True, ge=0, le=100, description='Percentage resistance for this winding.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "required": true,
+          "description": "Percentage resistance for this winding.",
+          "constraints": [
+            ">= 0",
+            "<= 100"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -7657,13 +7664,16 @@
           "is_derived": false
         },
         {
-          "name": "reactance_pct",
+          "name": "min_tap_pu",
           "sql_type": "FLOAT",
-          "python_type": null,
+          "python_type": "Annotated[float, Field(0.9, le=1.0, ge=0, description='Min tap in pu for this winding.')]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
+          "description": "Min tap in pu for this winding.",
+          "constraints": [
+            "<= 1.0",
+            ">= 0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -7672,43 +7682,15 @@
           "is_derived": false
         },
         {
-          "name": "no_load_loss_pct",
+          "name": "max_tap_pu",
           "sql_type": "FLOAT",
-          "python_type": null,
+          "python_type": "Annotated[float, Field(1.1, ge=1.0, description='Min tap in pu for this winding.')]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "tap_side",
-          "sql_type": "VARCHAR",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "tap_limits_json",
-          "sql_type": "JSONB",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
+          "description": "Min tap in pu for this winding.",
+          "constraints": [
+            ">= 1.0"
+          ],
           "default_value": null,
           "is_primary_key": false,
           "is_foreign_key": false,
@@ -7717,7 +7699,7 @@
           "is_derived": false
         }
       ],
-      "field_count": 15,
+      "field_count": 13,
       "relationships": [
         {
           "type": "references",
