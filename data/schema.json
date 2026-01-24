@@ -3383,12 +3383,12 @@
           "is_derived": false
         },
         {
-          "name": "horizontal_positions_json",
+          "name": "horizontal_positions",
           "sql_type": "JSONB",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Horizontal position of the conductor.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Horizontal position of the conductor.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -3398,12 +3398,12 @@
           "is_derived": false
         },
         {
-          "name": "vertical_positions_json",
+          "name": "vertical_positions",
           "sql_type": "JSONB",
-          "python_type": null,
+          "python_type": "Annotated[Distance, PINT_SCHEMA, Field(..., description='Vertical position of the conductor.')]",
           "nullable": true,
-          "required": false,
-          "description": null,
+          "required": true,
+          "description": "Vertical position of the conductor.",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -3413,42 +3413,12 @@
           "is_derived": false
         },
         {
-          "name": "positions_units",
+          "name": "insulation",
           "sql_type": "VARCHAR",
-          "python_type": null,
+          "python_type": "Annotated[WireInsulationType, PINT_SCHEMA, Field(WireInsulationType.AIR, description='Wire insulation type')]",
           "nullable": true,
           "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "neutral_insulated",
-          "sql_type": "BOOLEAN",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
-          "constraints": [],
-          "default_value": null,
-          "is_primary_key": false,
-          "is_foreign_key": false,
-          "references_table": null,
-          "references_column": null,
-          "is_derived": false
-        },
-        {
-          "name": "insulation_type",
-          "sql_type": "VARCHAR",
-          "python_type": null,
-          "nullable": true,
-          "required": false,
-          "description": null,
+          "description": "Wire insulation type",
           "constraints": [],
           "default_value": null,
           "is_primary_key": false,
@@ -3458,7 +3428,7 @@
           "is_derived": false
         }
       ],
-      "field_count": 6,
+      "field_count": 4,
       "relationships": [
         {
           "type": "referenced_by",
