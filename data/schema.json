@@ -7340,7 +7340,22 @@
         },
         {
           "name": "value_volts",
-          "sql_type": "NUMERIC",
+          "sql_type": "NUMERIC,",
+          "python_type": null,
+          "nullable": true,
+          "required": false,
+          "description": null,
+          "constraints": [],
+          "default_value": null,
+          "is_primary_key": false,
+          "is_foreign_key": false,
+          "references_table": null,
+          "references_column": null,
+          "is_derived": false
+        },
+        {
+          "name": "value_units",
+          "sql_type": "VARCHAR",
           "python_type": null,
           "nullable": true,
           "required": false,
@@ -7354,7 +7369,7 @@
           "is_derived": false
         }
       ],
-      "field_count": 3,
+      "field_count": 4,
       "relationships": [
         {
           "type": "referenced_by",
