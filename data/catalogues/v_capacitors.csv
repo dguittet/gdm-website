@@ -1,6 +1,0 @@
-capacitor_name,phase_code,bus,geometry,rated_voltage_value,rated_voltage_units,voltage_type,connection_type,in_service
-p1uc2,ABC,p1udt8413,POINT(-97.7144579687979 30.4297029028716),12.47,kilovolt,VoltageTypes.LINE_TO_LINE,ConnectionType.STAR,1
-p1uc3,ABC,p1udt10725,POINT(-97.7264032748243 30.4086611790218),12.47,kilovolt,VoltageTypes.LINE_TO_LINE,ConnectionType.STAR,1
-p1uc0,ABC,p1umv24,POINT(-97.7154236419182 30.4022803467702),12.47,kilovolt,VoltageTypes.LINE_TO_LINE,ConnectionType.STAR,1
-p1uc1,ABC,p1udt13040,POINT(-97.7009125915758 30.4115588835598),12.47,kilovolt,VoltageTypes.LINE_TO_LINE,ConnectionType.STAR,1
-p1uc4,ABC,p1udt22547,POINT(-97.7157435808092 30.4097234861423),12.47,kilovolt,VoltageTypes.LINE_TO_LINE,ConnectionType.STAR,1
