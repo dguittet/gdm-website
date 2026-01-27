@@ -1,0 +1,2 @@
+uuid,connection_type,rated_voltage_value,rated_voltage_units,voltage_type
+c00ad7f9-78dd-4493-a228-9693f0af715e,ConnectionType.STAR,12.47,kilovolt,VoltageTypes.LINE_TO_LINE
